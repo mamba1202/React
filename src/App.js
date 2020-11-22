@@ -16,7 +16,7 @@ function App() {
           React也不过如此
         </p>
         <p>编辑App.js就能改变页面展示</p>
-        <button onClick={ function(){alert('页面内的点击事件')} }>点击事件</button>
+        <button onClick={ sayHi }>点击事件</button>
       </header>
     </div >
   );

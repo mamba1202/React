@@ -1,0 +1,42 @@
+.botton1 {
+    box-sizing: border-box;
+    height: 32px;
+    background-color: #ffffff;
+    border: 1px solid rgba(153, 153, 153, 1);
+    border-radius: 4px;
+    padding: 4px 1em;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.botton1:focus {
+    outline: none;
+    border-color: black;
+}
+
+.botton1>.circle {
+    position: absolute;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    opacity: .5;
+    display: inline-block;
+    animation: 1s big forwards;
+    z-index: 0;
+}
+
+.botton1>.span1 {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes big {
+    0% {
+        transform: scale(0.1);
+    }
+    0% {
+        transform: scale(10);
+    }
+}

@@ -38,8 +38,9 @@ class AppPass extends Component {
                     <Judge></Judge>
                     <Time2 result={this.state.result2}></Time2>
                 </div>
-                <Track1 success1={this.success1.bind(this)}></Track1>
-                <Track2 success2={this.success2.bind(this)}></Track2>
+               <PlayGround success1={this.success1.bind(this)}
+               success2={this.success2.bind(this)}
+               />
             </div>
 
         )
@@ -69,6 +70,17 @@ function Judge() {
     )
 }
 
+function PlayGround(props){
+    let success1 =props.success1
+    let success2 =props.success2
+    return (
+        <div className="playground">
+            <Track1 success={success1}></Track1>
+            <Track2 success={success2}></Track2>
+        </div>
+    )
+}
+
 class Track1 extends Component {
     constructor(props) {
         super(props)
@@ -91,7 +103,7 @@ class Track1 extends Component {
             if (n >= 50) {
                 window.clearInterval(playerId)
                 console.log(this.props)
-                this.props.success1()
+                this.props.success()
             }
 
         }, 1000)
@@ -130,7 +142,8 @@ class Track2 extends Component {
             })
             if (n > 50) {
                 window.clearInterval(playerId)
-                this.props.success2()
+                console.log(this.props)
+                this.props.success()
 
             }
 

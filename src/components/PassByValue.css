@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.track {
+    border-bottom: 1px solid black;
+}
+
+.player {
+    transition: all 1s linear;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 40px;
+}

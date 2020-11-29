@@ -13,7 +13,7 @@
   },
   "homepage":"https://mamba1202.github.io/React/build",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start --prot 3001",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
